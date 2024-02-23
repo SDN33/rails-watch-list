@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="card-title"><strong><%= @movie.title %></strong></h2>
+        </div>
+        <div class="card-body">
+          <p><i class="fa-solid fa-star"></i> <%= @movie.rating %>/10</p>
+          <p><strong>Overview:</strong> <%= @movie.overview %></p>
+          <p><%= link_to "Back to Previous Page", request.referer, class: "btn btn-primary" %></p>
+          <hr>
+          <p><strong>Poster:</strong></p>
+          <%= image_tag @movie.poster_url, class: "img-fluid" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
